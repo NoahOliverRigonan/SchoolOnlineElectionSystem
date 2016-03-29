@@ -7,7 +7,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span> 
 			</button>
-			<a class="navbar-brand" href="../home/index.php">Online Election</a>
+			<a class="navbar-brand" href="../home/home.php">Online Election</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
@@ -24,7 +24,7 @@
 						<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
 						<li><a href="#"><i class="fa fa-wrench"></i> Settings</a></li>
 						<li class="divider"></li>
-						<li><a href="../../controller/logoutController.php"><i class="fa fa-sign-out"></i> Logout</a></li>
+						<li><a href="../../subController/logoutSubController.php"><i class="fa fa-sign-out"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>

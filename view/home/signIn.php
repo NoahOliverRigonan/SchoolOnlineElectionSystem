@@ -28,11 +28,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="index.php">Online Election</a>
+				<a class="navbar-brand" href="home.php">Online Election</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="#" title="Home">Home</a></li>
+					<li><a href="home.php" title="Home">Home</a></li>
 					<li><a href="#" title="About the system">About</a></li>
 					<li><a href="#" title="Subscribe us">Subscribe</a></li>
 				</ul>
@@ -48,7 +48,7 @@
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
-				<form class="form-horizontal" role="form" method="POST" action="../../controller/loginController.php">
+				<form class="form-horizontal" role="form" method="POST" action="../../subController/loginSubController.php">
 					<div class="panel panel-default border-sharp-edge panel-register-custom">
 						<div class="panel-heading border-sharp-edge"><h4><i class="fa fa-user"></i> Sign In</h4></div>
 						<div class="panel-body">

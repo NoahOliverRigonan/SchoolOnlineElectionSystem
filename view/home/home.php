@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION["isLoggedIn"])) {
-		header("Location: ../admin/adminDashboard.php");
+		header("Location: ../admin/admin.php");
 	} 
 ?>
 <!DOCTYPE html>
@@ -28,11 +28,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a class="navbar-brand" href="index.php">Online Election</a>
+				<a class="navbar-brand" href="home.php">Online Election</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li><a href="#" title="Home">Home</a></li>
+					<li><a href="home.php" title="Home">Home</a></li>
 					<li><a href="#" title="About the system">About</a></li>
 					<li><a href="#" title="Subscribe us">Subscribe</a></li>
 				</ul>
@@ -48,7 +48,7 @@
 		<div class="row">
 			<div class="col-md-6"></div>
 			<div class="col-md-6">
-				<form class="form-horizontal" role="form" method="POST" action="../../controller/registerController.php">
+				<form class="form-horizontal" role="form" method="POST" action="../../subController/registerSubController.php">
 					<div class="panel panel-default border-sharp-edge panel-register-custom">
 						<div class="panel-heading border-sharp-edge"><h4><i class="fa fa-pencil-square-o"></i> Sign-up for FREE!</h4></div>
 						<div class="panel-body">
@@ -261,7 +261,7 @@
 					<h4 class="modal-title"><i class="fa fa-user"></i> Sign in</h4>
 				</div>
 				<div class="modal-body">
-					<form class="form-horizontal" role="form" method="POST" action="../../controller/loginController.php">
+					<form class="form-horizontal" role="form" method="POST" action="../../subController/loginSubController.php">
 						<div class="form-group">
 						<label class="control-label col-sm-3">Username</label>
 							<div class="col-sm-9">

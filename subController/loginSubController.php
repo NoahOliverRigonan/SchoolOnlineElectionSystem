@@ -1,5 +1,5 @@
 <?php
-	include 'userSecurityController.php';
+	include '../controller/userSecurityController.php';
 
 	session_start();
 
@@ -9,7 +9,7 @@
 
 		$user = new userSecurity();
 		if($user->login($username, $password)) {
-			header("Location: ../view/admin/adminDashboard.php");
+			header("Location: ../view/admin/admin.php");
 
 			$_SESSION['currentUserLoggedIn'] = $_POST["username"];
 			isset($_SESSION['currentUserLoggedIn']);

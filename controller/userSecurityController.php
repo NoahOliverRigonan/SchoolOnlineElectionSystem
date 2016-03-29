@@ -78,12 +78,10 @@
 
 		// log out
 		public function logout() {
-			session_start();
 			unset($_SESSION['isLoggedIn']);
-
 			session_destroy();
 
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 		}
 	}
 ?>

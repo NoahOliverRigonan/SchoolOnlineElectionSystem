@@ -1,5 +1,5 @@
 <?php
-	include 'userSecurityController.php';
+	include '../controller/userSecurityController.php';
 
 	session_start();
 	$sessionData = new userSecurity();
@@ -14,7 +14,7 @@
 		$confirmPassword = $_POST["confirmPassword"];
 
 		if($firstname == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["firstnameError"] = true;
 			isset($_SESSION["firstnameError"]);
@@ -22,28 +22,28 @@
 			$sessionData->rememberData();
 			
 		} else if ($lastname == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["lastnameError"] = true;
 			isset($_SESSION["lastnameError"]);
 
 			$sessionData->rememberData();
 		} else if ($gender == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["genderError"] = true;
 			isset($_SESSION["genderError"]);
 			
 			$sessionData->rememberData();
 		} else if ($emailAddress == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["emailAddressError"] = true;
 			isset($_SESSION["emailAddressError"]);
 			
 			$sessionData->rememberData();
 		} else if($username == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["usernameError"] = true;
 			isset($_SESSION["usernameError"]);
@@ -52,28 +52,28 @@
 		} else if (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
 			$error[] = 'Please enter a valid email address.';
 		} else if ($password == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["passwordError"] = true;
 			isset($_SESSION["passwordError"]);
 
 			$sessionData->rememberData();
 		} else if (strlen($password) < 6) {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["passwordStrengthError"] = true;
 			isset($_SESSION["passwordStrengthError"]);
 
 			$sessionData->rememberData();
 		} else if ($confirmPassword == "") {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["confirmPasswordError"] = true;
 			isset($_SESSION["confirmPasswordError"]);
 
 			$sessionData->rememberData();
 		} else if ($password !== $confirmPassword) {
-			header("Location: ../view/home/index.php");
+			header("Location: ../view/home/home.php");
 
 			$_SESSION["confirmPasswordMatchError"] = true;
 			isset($_SESSION["confirmPasswordMatchError"]);
@@ -88,14 +88,14 @@
 				echo $row['Username'];
 
 				if($row['Username'] == $username) {
-					header("Location: ../view/home/index.php");
+					header("Location: ../view/home/home.php");
 
 					$_SESSION["usernameTakenError"] = true;
 					isset($_SESSION["usernameTakenError"]);
 
 					$sessionData->rememberData();
 				} else if($row['Email'] == $emailAddress) {
-					header("Location: ../view/home/index.php");
+					header("Location: ../view/home/home.php");
 
 					$_SESSION["emailAddressTakenError"] = true;
 					isset($_SESSION["emailAddressTakenError"]);
@@ -106,7 +106,7 @@
 					$user = new userSecurity();
 					if($user->register($firstname, $lastname, $gender, $emailAddress, $username, $password)) 
 					{
-						header("Location: ../view/home/index.php");
+						header("Location: ../view/home/home.php");
 
 						$_SESSION["successfullyRegistered"] = true;
 						isset($_SESSION["successfullyRegistered"]);

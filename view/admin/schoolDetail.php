@@ -28,12 +28,12 @@
 
 	<div id="o-wrapper" class="o-wrapper">
 		<?php
-			include 'adminHeader.php';
+			include 'includeAdminHeader.php';
 		?>
 	</div><!-- /o-wrapper -->
 
 	<?php
-		include 'sidebarMenu.php';
+		include 'includeSidebarMenu.php';
 	?>
 
 	<div class="container">
@@ -55,7 +55,7 @@
 	</div>
 
 	<?php
-		include 'adminFooter.php';
+		include 'includeAdminFooter.php';
 	?>
 
 	<div id="c-mask" class="c-mask"></div>

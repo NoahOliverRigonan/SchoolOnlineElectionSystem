@@ -28,12 +28,12 @@
 
 	<div id="o-wrapper" class="o-wrapper">
 		<?php
-			include 'adminHeader.php';
+			include 'includeAdminHeader.php';
 		?>
 	</div><!-- /o-wrapper -->
 
 	<?php
-		include 'sidebarMenu.php';
+		include 'includeSidebarMenu.php';
 	?>
 
 	<div class="container">
@@ -43,7 +43,7 @@
 			</div>
 			<div class="col-md-6" align="right">
 				<a href="schoolDetail.php?schoolId=0" class="btn btn-primary border-sharp-edge"><i class="fa fa-plus"></i> Add School</a>
-				<a href="adminDashboard.php" class="btn btn-danger border-sharp-edge"><i class="fa fa-close"></i> Close</a>
+				<a href="admin.php" class="btn btn-danger border-sharp-edge"><i class="fa fa-close"></i> Close</a>
 			</div>
 		</div>
 		<hr />
@@ -56,7 +56,7 @@
 	</div>
 
 	<?php
-		include 'adminFooter.php';
+		include 'includeAdminFooter.php';
 	?>
 
 	<div id="c-mask" class="c-mask"></div>

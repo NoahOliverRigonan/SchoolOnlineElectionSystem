@@ -8,7 +8,7 @@
 		</div>
 		<div class="panel link-panel-custom">
 			<b>
-				<a href="adminDashboard.php" class="panel-collapse-link"> 
+				<a href="admin.php" class="panel-collapse-link"> 
 					<div class="panel-link-div ">
 						Dashboard
 					</div>
